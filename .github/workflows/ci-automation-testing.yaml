@@ -1,0 +1,25 @@
+name: Run Standard Test Cases
+on:
+  workflow_dispatch:
+    inputs:
+      runDescription:
+        description: 'Run message'
+        required: true
+        default: 'Running test cases'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      # Instal node dependencies
+      - name: Install modules
+        run: npm install
+
+      # Instal node dependencies
+      - name: Run tests
+        run: npm test

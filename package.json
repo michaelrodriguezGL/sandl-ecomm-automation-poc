@@ -1,0 +1,19 @@
+{
+  "name": "sandl-ecomm-automation-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "wdio.conf.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chromedriver": "^91.0.0",
+    "wdio-chromedriver-service": "^7.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npx wdio run ./wdio.conf.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
